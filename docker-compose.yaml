@@ -8,6 +8,7 @@ services:
       - serve
     environment:
       - TZ="Europe/Berlin"
+    user: UID:GID
     volumes:
       - ./cache:/var/cache/ntfy
       - ./config:/etc/ntfy
