@@ -7,12 +7,12 @@ services:
     command:
       - serve
     environment:
-      - TZ="Europe/Berlin"
-      - NTFY_BASE_URL="https://notify.skom-service.de"
-      - NTFY_CACHE_FILE="/var/cache/ntfy/cache.db"
-      - NTFY_AUTH_FILE="/var/lib/ntfy/auth.db"
-      - NTFY_AUTH_DEFAULT_ACCESS="read-write"
-      - NTFY_UPSTREAM_BASE_URL="https://ntfy.sh"
+      - TZ=Europe/Berlin
+      - NTFY_BASE_URL=https://notify.skom-service.de
+      - NTFY_CACHE_FILE=/var/cache/ntfy/cache.db
+      - NTFY_AUTH_FILE=/var/lib/ntfy/auth.db
+      - NTFY_AUTH_DEFAULT_ACCESS=read-write
+      - NTFY_UPSTREAM_BASE_URL=https://ntfy.sh
     volumes:
       - ./cache:/var/cache/ntfy
       - ./db:/var/lib/ntfy/
