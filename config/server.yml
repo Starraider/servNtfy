@@ -11,7 +11,8 @@
 # - iOS push notifications for self-hosted servers (to calculate the Firebase poll_request topic)
 # - Matrix Push Gateway (to validate that the pushkey is correct)
 #
-base-url: https://notify.skom-service.de
+base-url: "https://notify.skom-service.de"
+default-host: "https://notify.skom-service.de"
 
 # Listen address for the HTTP & HTTPS web server. If "listen-https" is set, you must also
 # set "key-file" and "cert-file". Format: [<ip>]:<port>, e.g. "1.2.3.4:8080".
@@ -68,7 +69,7 @@ base-url: https://notify.skom-service.de
 #   If you are running ntfy with systemd, make sure this cache file is owned by the
 #   ntfy user and group by running: chown ntfy.ntfy <filename>.
 #
-# cache-file: <filename>
+cache-file: "/var/cache/ntfy/cache.db"
 # cache-duration: "12h"
 # cache-startup-queries:
 # cache-batch-size: 0
@@ -91,8 +92,8 @@ base-url: https://notify.skom-service.de
 #   If you are running ntfy with systemd, make sure this user database file is owned by the
 #   ntfy user and group by running: chown ntfy.ntfy <filename>.
 #
-# auth-file: "var/lip/ntfy/user.db"
-# auth-default-access: "deny-all"
+auth-file: "/var/lib/ntfy/user.db"
+auth-default-access: "deny-all"
 # auth-startup-queries:
 
 # If set, the X-Forwarded-For header is used to determine the visitor IP address
