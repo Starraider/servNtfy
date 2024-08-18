@@ -13,6 +13,8 @@ services:
       - NTFY_AUTH_FILE=/var/lib/ntfy/auth.db
       - NTFY_AUTH_DEFAULT_ACCESS=read-write
       - NTFY_UPSTREAM_BASE_URL=https://ntfy.sh
+      - NTFY_ENABLE_SIGNUP=true
+      - NTFY_ENABLE_LOGIN=true
     volumes:
       - ./cache:/var/cache/ntfy
       - ./db:/var/lib/ntfy/
