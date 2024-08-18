@@ -13,5 +13,5 @@ services:
       - ./config:/etc/ntfy
       - ./db:/var/lib/ntfy/
     ports:
-      - 80:80
+      - 8000:80
     restart: unless-stopped
